@@ -9,18 +9,45 @@
     <header>
         <a href="#" class="logo">Foto</a>
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </header>
-        <section>
-            <img src="stars.png" id="stars">
-            <img src="moon.png" id="moon">
-            <img src="mountains_behind.png" id="mountains_behind">
-            <img src="mountains_front.png" alt="mountains_front">
+            <section>
+                <img src="stars.png" id="stars">
+                <img src="moon.png" id="moon">
+                <img src="mountains_behind.png" id="mountains_behind">
+                <h2 id="text">RAYMUNDO SOSA</h2>
+                <a href="#sec" id="btn">Explore</a>
+                <img src="mountains_front.png" id="mountains_front">
+            </section>
+            <div class="sec" id="sec">
+                <h2>Me gusta mucho el espagueti</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut rerum qui maiores. Rem perferendis, aliquid iste et maiores nisi officia consequatur libero aspernatur quod odit aut? Amet tenetur asperiores iste! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit incidunt est ad vitae voluptatum distinctio, enim ratione, odio laudantium, ducimus nisi minima nemo numquam aliquid facere error quo cumque praesentium. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quibusdam ut ex quae, ab illo harum dolorem incidunt. Explicabo perferendis veritatis sequi pariatur velit modi totam at magnam quis sed! <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi eum quae distinctio, enim eos aperiam nihil eius nobis expedita voluptatum reiciendis maxime animi! Architecto sequi dolore inventore aspernatur laudantium! <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, accusamus atque ipsam itaque delectus fugit nemo ut tempora amet eveniet expedita, possimus error! At, itaque. Repudiandae expedita harum amet non.</p>
+            </div>
+            <script>
+                let stars = document.getElementById("stars");
+                let moon = document.getElementById("moon");
+                let mountains_behind = document.getElementById("mountains_behind");
+                let text = document.getElementById("text");
+                let btn = document.getElementById("btn");
+                let mountains_front = document.getElementById("mountains_front");
             
-        </section>
-    </ul>  
-</body>
+                window.addEventListener("scroll", function(){
+                    let value = window.scrollY
+                    stars.style.left = value * 0.25 + "px";
+                    moon.style.top = value * 1.05 + "px";
+                    mountains_behind.style.top = value * 0.5 + "px";
+                    mountains_front.style.top = value * 0 + "px";
+                    text.style.marginRight = value * 4 + "px";
+                    text.style.marginTop = value * 0.5 + "px";
+                    btn.style.marginTop = value * 0.5 + "px";
+
+
+                    
+                })
+            </script>
+        </ul>  
+    </body>
 </html>
