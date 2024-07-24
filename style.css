@@ -24,6 +24,7 @@ header
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
+    position: fixed;
 
 }
 header .logo
@@ -137,4 +138,13 @@ section img#mountains_front
 {
     font-size: 1.2em;
     color: #fff;
+}
+#projects .sec img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Proyectos</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Foto</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <a href="#projects" id="btn">Proyectos</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="projects">
+        <h2>Mis Proyectos</h2>
+        
+        <div class="sec">
+            <h2>The Edge of Shadows</h2>
+            <img src="https://culturedvultures.com/wp-content/uploads/2022/03/Heretic.jpg" alt="The Edge of Shadows">
+            <p><strong>Descripción:</strong> Un videojuego inspirado en Doom, con una narrativa oscura y emocionante.</p>
+            <p><strong>Tecnologías Utilizadas:</strong> Unity, C#, Blender para modelado 3D.</p>
+            <p><strong>Desafíos y Soluciones:</strong> La optimización del rendimiento fue un desafío clave, resuelto mediante la implementación de técnicas de nivel de detalle (LOD) y la optimización de scripts.</p>
+        </div>
+
+        <div class="sec">
+            <h2>Proyecto 2</h2>
+            <img src="https://media.istockphoto.com/id/1047259374/photo/programming-source-code-abstract-background.jpg?s=612x612&w=0&k=20&c=07DAFiujCb58Zgu5ZArLprHiSKew5pCGqbTnop9GclA=" alt="Proyecto 2">
+            <p><strong>Descripción:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p><strong>Tecnologías Utilizadas:</strong> Lorem ipsum dolor sit amet.</p>
+            <p><strong>Desafíos y Soluciones:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat.</p>
+        </div>
+
+        <div class="sec">
+            <h2>Proyecto 3</h2>
+            <img src="https://media.istockphoto.com/id/1075599562/photo/programmer-working-with-program-code.jpg?s=612x612&w=0&k=20&c=n3Vw5SMbMCWW1YGG6lnTfrwndNQ8B_R4Vw-BN7LkqpA=" alt="Proyecto 3">
+            <p><strong>Descripción:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p><strong>Tecnologías Utilizadas:</strong> Lorem ipsum dolor sit amet.</p>
+            <p><strong>Desafíos y Soluciones:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat.</p>
+        </div>
+    </div>
+    <script>
+        let stars = document.getElementById("stars");
+        let moon = document.getElementById("moon");
+        let mountains_behind = document.getElementById("mountains_behind");
+        let text = document.getElementById("text");
+        let btn = document.getElementById("btn");
+        let mountains_front = document.getElementById("mountains_front");
+
+        window.addEventListener("scroll", function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + "px";
+            moon.style.top = value * 1.05 + "px";
+            mountains_behind.style.top = value * 0.5 + "px";
+            mountains_front.style.top = value * 0 + "px";
+            text.style.marginRight = value * 4 + "px";
+            text.style.marginTop = value * 0.5 + "px";
+            btn.style.marginTop = value * 0.5 + "px";
+        });
+    </script>
+</body>
+</html>
